@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Evaluate News NLP</title>
+    </head>
+
+    <body>
+
+        <header></header>
+
+        <main>
+            <section class="separate left">
+            <div class="centerOfSeparatedPart">
+                <label id='UrlText'>Enter Url To Evaluate a News Article with NLP</label>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="URL" type="text" name="input" value="" placeholder="url">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            </div>
+            </section>
+
+            <section class="separate right">
+                <div class="centerOfSeparatedPart">
+                    <div id="result">
+                <strong>URL Result : </strong>
+                <hr/>
+                score_tag : <div id="score_tag"></div>
+                confidence : <div id="confidence"></div>
+                agreement : <div id="agreement"></div>
+                </div>
+            </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+        <script>
+          if ('serviceWorker' in navigator) {
+           window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/service-worker.js')
+           })
+          }
+        </script>
+    </body>
+</html>
